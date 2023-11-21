@@ -22,7 +22,6 @@ class Produit
             $stmt->bindParam(':quantite', $this->quantiteStock, PDO::PARAM_INT);
             $stmt->bindParam(':id', $this->id, PDO::PARAM_INT);
             $stmt->execute();
-
             echo "Quantité en stock mise à jour avec succès.";
         } catch (PDOException $e) {
             echo "Erreur lors de la mise à jour de la quantité en stock : " . $e->getMessage();
